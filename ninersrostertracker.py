@@ -155,6 +155,10 @@ def mainMenu():
     x = input('Type "1" to use the 49ers Depth Chart, "2" for the 49ers Jersey Number Grabber, or "QUIT" to close the program: ').upper()
     if x == 'QUIT':
         sys.exit()
+    
+    elif int(x) != 1 and int(x) != 2:
+        print("Please choose one of the correct options.")
+        mainMenu()
 
     elif int(x) == 1:
         print('Welcome to the 49ers Depth Chart Tracker! Type "EXIT" to go back to the main menu.')
@@ -207,6 +211,8 @@ def mainMenu():
                 print(PlayersByPosition.LS)
             elif z == 'EXIT':
                 mainMenu()
+            elif z != 'QB' or 'RB' or 'FB' or 'WR' or 'TE' or 'LT' or 'LG' or 'C' or 'RG' or 'RT' or 'RE' or 'DT' or 'LE' or 'LB' or 'CB' or 'FS' or 'SS' or 'K' or 'P' or 'KR' or 'PR' or 'LS' or 'EXIT':
+                print("Please choose a valid position group or command.")
 
     elif int(x) == 2:
         print("Welcome to the 49ers Jersey Number Grabber! Type 'EXIT' to go back to the main menu.")
